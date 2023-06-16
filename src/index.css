@@ -5,73 +5,152 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #e0e0e0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .main {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.img-container {
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.img {
-  width: 60%;
-
-  margin: 5px;
-  border-radius: 8px;
+  margin-top: 15vh;
 }
 
 .stars-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50vw;
-  height: 20vh;
-  background: #acacacaa;
+  width: 30vw;
+  height: 3vh;
+  background: #ffffffaa;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px gray;
+  padding: 3px;
 }
-.star {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 10%;
-  height: 25%;
-  background: #e4e4e4;
-  margin: 1px;
-  cursor: pointer;
-}
-/* .star:hover{
-  background: #65fb33;
-} */
-.star-bg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 10%;
-  height: 25%;
-  background: #f5f568;
+
+.star-gray {
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
   transition: all 200ms linear;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1em;
+
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid rgb(212, 212, 212);
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    transition: all 100ms linear;
+
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid rgb(212, 212, 212);
+    border-left: 1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
 }
-.star-bg1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 10%;
-  height: 25%;
-  background: #13cd2f;
-  transition: all 100ms linear;
+
+.star-yellow {
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+  transition: all 200ms linear;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1em;
+
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid rgb(239, 239, 22);
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    transition: all 100ms linear;
+
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid rgb(239, 239, 22);
+    border-left: 1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
+}
+
+.star-green {
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
+  transition: all 200ms linear;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1em;
+
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid rgb(26, 227, 15);
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    transition: all 100ms linear;
+
+    position: absolute;
+    top: 0.6em;
+    left: -1em;
+
+    border-right: 1em solid transparent;
+    border-bottom: 0.7em solid rgb(26, 227, 15);
+    border-left: 1em solid transparent;
+
+    transform: rotate(-35deg);
+  }
+
+  &:after {
+    transform: rotate(35deg);
+  }
 }

@@ -9,7 +9,7 @@ function Star({
 }) {
   return (
     <div className="stars-container">
-      {stars.map((star, index) => {
+      {stars.map((star) => {
         return (
           <div
             onClick={() => oncleakfunc(star)}
@@ -22,13 +22,11 @@ function Star({
 
               moseOverFunc();
             }}
-            key={index}
-            className={`star ${star <= clickedColor && "star-bg"} ${
-              moseOvercolor >= star && "star-bg1"
+            key={star}
+            className={`star-gray ${star <= clickedColor && "star-yellow"} ${
+              moseOvercolor >= star && "star-green"
             }  `}
-          >
-            {star}
-          </div>
+          ></div>
         );
       })}
     </div>
